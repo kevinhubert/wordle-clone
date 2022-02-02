@@ -4,8 +4,8 @@ import GameGridTile from './GameGridTile';
 export default class GameGridRow extends React.Component {
   render() {
     return (
-    <div className="game-grid__row">
-      <GameGridTile />
+    <div className="grid grid-cols-5 gap-1">
+      <GameGridTile handleUserInput={this.props.handleUserInput}/>
       <GameGridTile />
       <GameGridTile />
       <GameGridTile />

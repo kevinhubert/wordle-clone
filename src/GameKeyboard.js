@@ -13,31 +13,31 @@ export default class GameKeyboard extends React.Component {
     }
 
     return (
-      <div className='game-keyboard'>
-        <div className="game-keyboard__row">
+      <div className='GameKeyboard'>
+        <div className="GameKeyboardRow flex justify-center items-center mb-2 mx-auto">
           {
             keyboardFirstRow.map(letter => {
-              return <div onClick={handleClick} className="game-keyboard__letter" data-key={letter}>{letter}</div>
+              return <div onClick={handleClick} className="flex justify-center items-center rounded h-16 w-10 text-white mr-1 bg-black last-of-type:mr-0" data-key={letter}>{letter}</div>
             })
           }
         </div>
-        <div className="game-keyboard__row">
-          <div className="game-keyboard__letter--spacer"></div>
+        <div className="GameKeyboardRow flex justify-center items-center mb-2 mx-auto">
+          <div className="flex-[.5]"></div>
           {
             keyboardSecondRow.map(letter => {
-              return <div onClick={handleClick} className="game-keyboard__letter" data-key={letter}>{letter}</div>
+              return <div onClick={handleClick} className="flex justify-center items-center rounded h-16 w-10 text-white mr-1 bg-black last-of-type:mr-0" data-key={letter}>{letter}</div>
             })
           }
-          <div className="game-keyboard__letter--spacer"></div>
+          <div className="flex-[.5]"></div>
         </div>
-        <div className="game-keyboard__row">
-          <div className="game-keyboard__letter game-keyboard__letter--enter">Enter</div>
+        <div className="GameKeyboardRow flex justify-center items-center mb-2 mx-auto">
+          <div className="flex justify-center items-center rounded h-16 w-10 text-white mr-1 bg-black last-of-type:mr-0 text-xs">Enter</div>
             {
             keyboardThirdRow.map(letter => {
-              return <div onClick={handleClick} className="game-keyboard__letter" data-key={letter}>{letter}</div>
+              return <div onClick={handleClick} className="flex justify-center items-center rounded h-16 w-10 text-white mr-1 bg-black last-of-type:mr-0" data-key={letter}>{letter}</div>
             })
           }
-          <div className="game-keyboard__letter game-keyboard__letter--delete">Del</div>
+          <div className="flex justify-center items-center rounded h-16 w-10 text-white mr-1 bg-black last-of-type:mr-0 text-xs">Del</div>
         </div>
       </div>
     )
